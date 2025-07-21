@@ -10,8 +10,8 @@ This repository hosts the OpenAPI specification for the Cognigy.AI REST API.
 ## Usage
 
 The OpenAPI specification is available at:
-- **GitHub Pages URL**: `https://YOUR_USERNAME.github.io/YOUR_REPO_NAME/sorted-openapi.json`
-- **Raw GitHub URL**: `https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO_NAME/main/sorted-openapi.json`
+- **GitHub Pages URL**: `https://tmccaughey.github.io/private/sorted-openapi.json`
+- **Raw GitHub URL**: `https://raw.githubusercontent.com/tmccaughey/private/main/sorted-openapi.json`
 
 ## For Mintlify
 
@@ -19,7 +19,7 @@ Use the GitHub Pages URL in your Mintlify configuration:
 
 ```json
 {
-  "openapi": "https://YOUR_USERNAME.github.io/YOUR_REPO_NAME/sorted-openapi.json"
+  "openapi": "https://tmccaughey.github.io/private/sorted-openapi.json"
 }
 ```
 
