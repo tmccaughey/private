@@ -1,0 +1,95 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Cognigy.AI REST API - Test",
+    "version": "2025.14.2",
+    "description": "Test version of the Cognigy.AI API documentation"
+  },
+  "servers": [
+    {
+      "url": "https://api-trial.cognigy.ai/new/",
+      "description": "Cognigy.AI API"
+    }
+  ],
+  "paths": {
+    "/v2.0/users/me": {
+      "get": {
+        "summary": "Get current user",
+        "description": "Gets the users own profile",
+        "operationId": "readUserMe_2_0",
+        "tags": ["Users"],
+        "security": [
+          {"APIKeyHeader": []}
+        ],
+        "responses": {
+          "200": {
+            "description": "User profile retrieved successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {"type": "string"},
+                    "email": {"type": "string"},
+                    "name": {"type": "string"}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v2.0/projects": {
+      "get": {
+        "summary": "Get projects",
+        "description": "Get all projects for the current user",
+        "operationId": "getProjects_2_0",
+        "tags": ["Projects"],
+        "security": [
+          {"APIKeyHeader": []}
+        ],
+        "responses": {
+          "200": {
+            "description": "Projects retrieved successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {"type": "string"},
+                      "name": {"type": "string"},
+                      "description": {"type": "string"}
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "APIKeyHeader": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "X-API-Key",
+        "description": "Supply the API Key in the HTTP-Header"
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Users",
+      "description": "User management operations"
+    },
+    {
+      "name": "Projects", 
+      "description": "Project management operations"
+    }
+  ]
+}
